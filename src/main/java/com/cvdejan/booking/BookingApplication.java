@@ -15,7 +15,7 @@ import java.time.LocalTime;
 import java.util.Arrays;
 
 @SpringBootApplication
-public class BookingApplication {
+public class BookingApplication  {
 
 	public static void main(String[] args) {
 		SpringApplication.run(BookingApplication.class, args);
