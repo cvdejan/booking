@@ -5,32 +5,21 @@
 -- Dumped from database version 13.3
 -- Dumped by pg_dump version 13.3
 
-SET statement_timeout = 0;
-SET lock_timeout = 0;
-SET idle_in_transaction_session_timeout = 0;
-SET client_encoding = 'UTF8';
-SET standard_conforming_strings = on;
-SELECT pg_catalog.set_config('search_path', '', false);
-SET check_function_bodies = false;
-SET xmloption = content;
-SET client_min_messages = warning;
-SET row_security = off;
-
 --
--- Name: booking; Type: SCHEMA; Schema: -; Owner: dejan
+-- Name: booking; Type: SCHEMA; Schema: -; Owner: postgres
 --
 
 CREATE SCHEMA booking;
 
 
-ALTER SCHEMA booking OWNER TO dejan;
+--ALTER SCHEMA booking OWNER TO postgres;
 
 SET default_tablespace = '';
 
 SET default_table_access_method = heap;
 
 --
--- Name: app_user; Type: TABLE; Schema: booking; Owner: dejan
+-- Name: app_user; Type: TABLE; Schema: booking; Owner: postgres
 --
 
 CREATE TABLE booking.app_user (
@@ -43,10 +32,10 @@ CREATE TABLE booking.app_user (
 );
 
 
-ALTER TABLE booking.app_user OWNER TO dejan;
+ALTER TABLE booking.app_user OWNER TO postgres;
 
 --
--- Name: app_user_id_seq; Type: SEQUENCE; Schema: booking; Owner: dejan
+-- Name: app_user_id_seq; Type: SEQUENCE; Schema: booking; Owner: postgres
 --
 
 CREATE SEQUENCE booking.app_user_id_seq
@@ -57,17 +46,17 @@ CREATE SEQUENCE booking.app_user_id_seq
     CACHE 1;
 
 
-ALTER TABLE booking.app_user_id_seq OWNER TO dejan;
+ALTER TABLE booking.app_user_id_seq OWNER TO postgres;
 
 --
--- Name: app_user_id_seq; Type: SEQUENCE OWNED BY; Schema: booking; Owner: dejan
+-- Name: app_user_id_seq; Type: SEQUENCE OWNED BY; Schema: booking; Owner: postgres
 --
 
 ALTER SEQUENCE booking.app_user_id_seq OWNED BY booking.app_user.id;
 
 
 --
--- Name: app_user_roles; Type: TABLE; Schema: booking; Owner: dejan
+-- Name: app_user_roles; Type: TABLE; Schema: booking; Owner: postgres
 --
 
 CREATE TABLE booking.app_user_roles (
@@ -76,10 +65,10 @@ CREATE TABLE booking.app_user_roles (
 );
 
 
-ALTER TABLE booking.app_user_roles OWNER TO dejan;
+ALTER TABLE booking.app_user_roles OWNER TO postgres;
 
 --
--- Name: booking; Type: TABLE; Schema: booking; Owner: dejan
+-- Name: booking; Type: TABLE; Schema: booking; Owner: postgres
 --
 
 CREATE TABLE booking.booking (
@@ -108,10 +97,10 @@ CREATE TABLE booking.booking (
 );
 
 
-ALTER TABLE booking.booking OWNER TO dejan;
+ALTER TABLE booking.booking OWNER TO postgres;
 
 --
--- Name: booking_dine_in; Type: TABLE; Schema: booking; Owner: dejan
+-- Name: booking_dine_in; Type: TABLE; Schema: booking; Owner: postgres
 --
 
 CREATE TABLE booking.booking_dine_in (
@@ -120,10 +109,10 @@ CREATE TABLE booking.booking_dine_in (
 );
 
 
-ALTER TABLE booking.booking_dine_in OWNER TO dejan;
+ALTER TABLE booking.booking_dine_in OWNER TO postgres;
 
 --
--- Name: booking_foods; Type: TABLE; Schema: booking; Owner: dejan
+-- Name: booking_foods; Type: TABLE; Schema: booking; Owner: postgres
 --
 
 CREATE TABLE booking.booking_foods (
@@ -132,10 +121,10 @@ CREATE TABLE booking.booking_foods (
 );
 
 
-ALTER TABLE booking.booking_foods OWNER TO dejan;
+ALTER TABLE booking.booking_foods OWNER TO postgres;
 
 --
--- Name: booking_id_seq; Type: SEQUENCE; Schema: booking; Owner: dejan
+-- Name: booking_id_seq; Type: SEQUENCE; Schema: booking; Owner: postgres
 --
 
 CREATE SEQUENCE booking.booking_id_seq
@@ -146,17 +135,17 @@ CREATE SEQUENCE booking.booking_id_seq
     CACHE 1;
 
 
-ALTER TABLE booking.booking_id_seq OWNER TO dejan;
+ALTER TABLE booking.booking_id_seq OWNER TO postgres;
 
 --
--- Name: booking_id_seq; Type: SEQUENCE OWNED BY; Schema: booking; Owner: dejan
+-- Name: booking_id_seq; Type: SEQUENCE OWNED BY; Schema: booking; Owner: postgres
 --
 
 ALTER SEQUENCE booking.booking_id_seq OWNED BY booking.booking.id;
 
 
 --
--- Name: city; Type: TABLE; Schema: booking; Owner: dejan
+-- Name: city; Type: TABLE; Schema: booking; Owner: postgres
 --
 
 CREATE TABLE booking.city (
@@ -165,10 +154,10 @@ CREATE TABLE booking.city (
 );
 
 
-ALTER TABLE booking.city OWNER TO dejan;
+ALTER TABLE booking.city OWNER TO postgres;
 
 --
--- Name: city_id_seq; Type: SEQUENCE; Schema: booking; Owner: dejan
+-- Name: city_id_seq; Type: SEQUENCE; Schema: booking; Owner: postgres
 --
 
 CREATE SEQUENCE booking.city_id_seq
@@ -179,17 +168,17 @@ CREATE SEQUENCE booking.city_id_seq
     CACHE 1;
 
 
-ALTER TABLE booking.city_id_seq OWNER TO dejan;
+ALTER TABLE booking.city_id_seq OWNER TO postgres;
 
 --
--- Name: city_id_seq; Type: SEQUENCE OWNED BY; Schema: booking; Owner: dejan
+-- Name: city_id_seq; Type: SEQUENCE OWNED BY; Schema: booking; Owner: postgres
 --
 
 ALTER SEQUENCE booking.city_id_seq OWNED BY booking.city.id;
 
 
 --
--- Name: country; Type: TABLE; Schema: booking; Owner: dejan
+-- Name: country; Type: TABLE; Schema: booking; Owner: postgres
 --
 
 CREATE TABLE booking.country (
@@ -198,10 +187,10 @@ CREATE TABLE booking.country (
 );
 
 
-ALTER TABLE booking.country OWNER TO dejan;
+ALTER TABLE booking.country OWNER TO postgres;
 
 --
--- Name: country_id_seq; Type: SEQUENCE; Schema: booking; Owner: dejan
+-- Name: country_id_seq; Type: SEQUENCE; Schema: booking; Owner: postgres
 --
 
 CREATE SEQUENCE booking.country_id_seq
@@ -212,17 +201,17 @@ CREATE SEQUENCE booking.country_id_seq
     CACHE 1;
 
 
-ALTER TABLE booking.country_id_seq OWNER TO dejan;
+ALTER TABLE booking.country_id_seq OWNER TO postgres;
 
 --
--- Name: country_id_seq; Type: SEQUENCE OWNED BY; Schema: booking; Owner: dejan
+-- Name: country_id_seq; Type: SEQUENCE OWNED BY; Schema: booking; Owner: postgres
 --
 
 ALTER SEQUENCE booking.country_id_seq OWNED BY booking.country.id;
 
 
 --
--- Name: hotel; Type: TABLE; Schema: booking; Owner: dejan
+-- Name: hotel; Type: TABLE; Schema: booking; Owner: postgres
 --
 
 CREATE TABLE booking.hotel (
@@ -234,10 +223,10 @@ CREATE TABLE booking.hotel (
 );
 
 
-ALTER TABLE booking.hotel OWNER TO dejan;
+ALTER TABLE booking.hotel OWNER TO postgres;
 
 --
--- Name: hotel_id_seq; Type: SEQUENCE; Schema: booking; Owner: dejan
+-- Name: hotel_id_seq; Type: SEQUENCE; Schema: booking; Owner: postgres
 --
 
 CREATE SEQUENCE booking.hotel_id_seq
@@ -248,17 +237,17 @@ CREATE SEQUENCE booking.hotel_id_seq
     CACHE 1;
 
 
-ALTER TABLE booking.hotel_id_seq OWNER TO dejan;
+ALTER TABLE booking.hotel_id_seq OWNER TO postgres;
 
 --
--- Name: hotel_id_seq; Type: SEQUENCE OWNED BY; Schema: booking; Owner: dejan
+-- Name: hotel_id_seq; Type: SEQUENCE OWNED BY; Schema: booking; Owner: postgres
 --
 
 ALTER SEQUENCE booking.hotel_id_seq OWNED BY booking.hotel.id;
 
 
 --
--- Name: role; Type: TABLE; Schema: booking; Owner: dejan
+-- Name: role; Type: TABLE; Schema: booking; Owner: postgres
 --
 
 CREATE TABLE booking.role (
@@ -267,10 +256,10 @@ CREATE TABLE booking.role (
 );
 
 
-ALTER TABLE booking.role OWNER TO dejan;
+ALTER TABLE booking.role OWNER TO postgres;
 
 --
--- Name: role_id_seq; Type: SEQUENCE; Schema: booking; Owner: dejan
+-- Name: role_id_seq; Type: SEQUENCE; Schema: booking; Owner: postgres
 --
 
 CREATE SEQUENCE booking.role_id_seq
@@ -281,17 +270,17 @@ CREATE SEQUENCE booking.role_id_seq
     CACHE 1;
 
 
-ALTER TABLE booking.role_id_seq OWNER TO dejan;
+ALTER TABLE booking.role_id_seq OWNER TO postgres;
 
 --
--- Name: role_id_seq; Type: SEQUENCE OWNED BY; Schema: booking; Owner: dejan
+-- Name: role_id_seq; Type: SEQUENCE OWNED BY; Schema: booking; Owner: postgres
 --
 
 ALTER SEQUENCE booking.role_id_seq OWNED BY booking.role.id;
 
 
 --
--- Name: room_type; Type: TABLE; Schema: booking; Owner: dejan
+-- Name: room_type; Type: TABLE; Schema: booking; Owner: postgres
 --
 
 CREATE TABLE booking.room_type (
@@ -305,10 +294,10 @@ CREATE TABLE booking.room_type (
 );
 
 
-ALTER TABLE booking.room_type OWNER TO dejan;
+ALTER TABLE booking.room_type OWNER TO postgres;
 
 --
--- Name: room_type_id_seq; Type: SEQUENCE; Schema: booking; Owner: dejan
+-- Name: room_type_id_seq; Type: SEQUENCE; Schema: booking; Owner: postgres
 --
 
 CREATE SEQUENCE booking.room_type_id_seq
@@ -319,75 +308,75 @@ CREATE SEQUENCE booking.room_type_id_seq
     CACHE 1;
 
 
-ALTER TABLE booking.room_type_id_seq OWNER TO dejan;
+ALTER TABLE booking.room_type_id_seq OWNER TO postgres;
 
 --
--- Name: room_type_id_seq; Type: SEQUENCE OWNED BY; Schema: booking; Owner: dejan
+-- Name: room_type_id_seq; Type: SEQUENCE OWNED BY; Schema: booking; Owner: postgres
 --
 
 ALTER SEQUENCE booking.room_type_id_seq OWNED BY booking.room_type.id;
 
 
 --
--- Name: app_user id; Type: DEFAULT; Schema: booking; Owner: dejan
+-- Name: app_user id; Type: DEFAULT; Schema: booking; Owner: postgres
 --
 
 ALTER TABLE ONLY booking.app_user ALTER COLUMN id SET DEFAULT nextval('booking.app_user_id_seq'::regclass);
 
 
 --
--- Name: booking id; Type: DEFAULT; Schema: booking; Owner: dejan
+-- Name: booking id; Type: DEFAULT; Schema: booking; Owner: postgres
 --
 
 ALTER TABLE ONLY booking.booking ALTER COLUMN id SET DEFAULT nextval('booking.booking_id_seq'::regclass);
 
 
 --
--- Name: city id; Type: DEFAULT; Schema: booking; Owner: dejan
+-- Name: city id; Type: DEFAULT; Schema: booking; Owner: postgres
 --
 
 ALTER TABLE ONLY booking.city ALTER COLUMN id SET DEFAULT nextval('booking.city_id_seq'::regclass);
 
 
 --
--- Name: country id; Type: DEFAULT; Schema: booking; Owner: dejan
+-- Name: country id; Type: DEFAULT; Schema: booking; Owner: postgres
 --
 
 ALTER TABLE ONLY booking.country ALTER COLUMN id SET DEFAULT nextval('booking.country_id_seq'::regclass);
 
 
 --
--- Name: hotel id; Type: DEFAULT; Schema: booking; Owner: dejan
+-- Name: hotel id; Type: DEFAULT; Schema: booking; Owner: postgres
 --
 
 ALTER TABLE ONLY booking.hotel ALTER COLUMN id SET DEFAULT nextval('booking.hotel_id_seq'::regclass);
 
 
 --
--- Name: role id; Type: DEFAULT; Schema: booking; Owner: dejan
+-- Name: role id; Type: DEFAULT; Schema: booking; Owner: postgres
 --
 
 ALTER TABLE ONLY booking.role ALTER COLUMN id SET DEFAULT nextval('booking.role_id_seq'::regclass);
 
 
 --
--- Name: room_type id; Type: DEFAULT; Schema: booking; Owner: dejan
+-- Name: room_type id; Type: DEFAULT; Schema: booking; Owner: postgres
 --
 
 ALTER TABLE ONLY booking.room_type ALTER COLUMN id SET DEFAULT nextval('booking.room_type_id_seq'::regclass);
 
 
 --
--- Data for Name: app_user; Type: TABLE DATA; Schema: booking; Owner: dejan
+-- Data for Name: app_user; Type: TABLE DATA; Schema: booking; Owner: postgres
 --
 
 COPY booking.app_user (id, address, email, name, password, user_name) FROM stdin;
-1	Sydney	dejan@yahoo.com	Dejan Cvetkovski	$2a$10$.ybpTVJuMGaoS1KNdLt5UeYwHEMJFQdS9Da4C6uMQ9/MLaaVZgoiK	dejan
+1	Sydney	postgres@yahoo.com	postgres Cvetkovski	$2a$10$.ybpTVJuMGaoS1KNdLt5UeYwHEMJFQdS9Da4C6uMQ9/MLaaVZgoiK	postgres
 \.
 
 
 --
--- Data for Name: app_user_roles; Type: TABLE DATA; Schema: booking; Owner: dejan
+-- Data for Name: app_user_roles; Type: TABLE DATA; Schema: booking; Owner: postgres
 --
 
 COPY booking.app_user_roles (app_user_id, role_id) FROM stdin;
@@ -397,7 +386,7 @@ COPY booking.app_user_roles (app_user_id, role_id) FROM stdin;
 
 
 --
--- Data for Name: booking; Type: TABLE DATA; Schema: booking; Owner: dejan
+-- Data for Name: booking; Type: TABLE DATA; Schema: booking; Owner: postgres
 --
 
 COPY booking.booking (id, adults, check_in, check_out, children, city_id, country_id, customer_name, dob, extra_bed, gender, guest1age, guest1gender, guest1name, guest2age, guest2gender, guest2name, hotel_id, is_expanded, phone, room_type_id, status) FROM stdin;
@@ -405,7 +394,7 @@ COPY booking.booking (id, adults, check_in, check_out, children, city_id, countr
 
 
 --
--- Data for Name: booking_dine_in; Type: TABLE DATA; Schema: booking; Owner: dejan
+-- Data for Name: booking_dine_in; Type: TABLE DATA; Schema: booking; Owner: postgres
 --
 
 COPY booking.booking_dine_in (owner_id, dine_in) FROM stdin;
@@ -413,7 +402,7 @@ COPY booking.booking_dine_in (owner_id, dine_in) FROM stdin;
 
 
 --
--- Data for Name: booking_foods; Type: TABLE DATA; Schema: booking; Owner: dejan
+-- Data for Name: booking_foods; Type: TABLE DATA; Schema: booking; Owner: postgres
 --
 
 COPY booking.booking_foods (owner_id, food) FROM stdin;
@@ -421,7 +410,7 @@ COPY booking.booking_foods (owner_id, food) FROM stdin;
 
 
 --
--- Data for Name: city; Type: TABLE DATA; Schema: booking; Owner: dejan
+-- Data for Name: city; Type: TABLE DATA; Schema: booking; Owner: postgres
 --
 
 COPY booking.city (id, city_name) FROM stdin;
@@ -450,7 +439,7 @@ COPY booking.city (id, city_name) FROM stdin;
 
 
 --
--- Data for Name: country; Type: TABLE DATA; Schema: booking; Owner: dejan
+-- Data for Name: country; Type: TABLE DATA; Schema: booking; Owner: postgres
 --
 
 COPY booking.country (id, country_name) FROM stdin;
@@ -471,7 +460,7 @@ COPY booking.country (id, country_name) FROM stdin;
 
 
 --
--- Data for Name: hotel; Type: TABLE DATA; Schema: booking; Owner: dejan
+-- Data for Name: hotel; Type: TABLE DATA; Schema: booking; Owner: postgres
 --
 
 COPY booking.hotel (id, hotel_description, hotel_location, hotel_name, hotel_image) FROM stdin;
@@ -484,7 +473,7 @@ COPY booking.hotel (id, hotel_description, hotel_location, hotel_name, hotel_ima
 
 
 --
--- Data for Name: role; Type: TABLE DATA; Schema: booking; Owner: dejan
+-- Data for Name: role; Type: TABLE DATA; Schema: booking; Owner: postgres
 --
 
 COPY booking.role (id, name) FROM stdin;
@@ -494,7 +483,7 @@ COPY booking.role (id, name) FROM stdin;
 
 
 --
--- Data for Name: room_type; Type: TABLE DATA; Schema: booking; Owner: dejan
+-- Data for Name: room_type; Type: TABLE DATA; Schema: booking; Owner: postgres
 --
 
 COPY booking.room_type (id, check_in, check_out, max_persons, price, room_type_name, vat) FROM stdin;
@@ -508,56 +497,56 @@ COPY booking.room_type (id, check_in, check_out, max_persons, price, room_type_n
 
 
 --
--- Name: app_user_id_seq; Type: SEQUENCE SET; Schema: booking; Owner: dejan
+-- Name: app_user_id_seq; Type: SEQUENCE SET; Schema: booking; Owner: postgres
 --
 
 SELECT pg_catalog.setval('booking.app_user_id_seq', 1, true);
 
 
 --
--- Name: booking_id_seq; Type: SEQUENCE SET; Schema: booking; Owner: dejan
+-- Name: booking_id_seq; Type: SEQUENCE SET; Schema: booking; Owner: postgres
 --
 
 SELECT pg_catalog.setval('booking.booking_id_seq', 1, false);
 
 
 --
--- Name: city_id_seq; Type: SEQUENCE SET; Schema: booking; Owner: dejan
+-- Name: city_id_seq; Type: SEQUENCE SET; Schema: booking; Owner: postgres
 --
 
 SELECT pg_catalog.setval('booking.city_id_seq', 21, true);
 
 
 --
--- Name: country_id_seq; Type: SEQUENCE SET; Schema: booking; Owner: dejan
+-- Name: country_id_seq; Type: SEQUENCE SET; Schema: booking; Owner: postgres
 --
 
 SELECT pg_catalog.setval('booking.country_id_seq', 13, true);
 
 
 --
--- Name: hotel_id_seq; Type: SEQUENCE SET; Schema: booking; Owner: dejan
+-- Name: hotel_id_seq; Type: SEQUENCE SET; Schema: booking; Owner: postgres
 --
 
 SELECT pg_catalog.setval('booking.hotel_id_seq', 5, true);
 
 
 --
--- Name: role_id_seq; Type: SEQUENCE SET; Schema: booking; Owner: dejan
+-- Name: role_id_seq; Type: SEQUENCE SET; Schema: booking; Owner: postgres
 --
 
 SELECT pg_catalog.setval('booking.role_id_seq', 2, true);
 
 
 --
--- Name: room_type_id_seq; Type: SEQUENCE SET; Schema: booking; Owner: dejan
+-- Name: room_type_id_seq; Type: SEQUENCE SET; Schema: booking; Owner: postgres
 --
 
 SELECT pg_catalog.setval('booking.room_type_id_seq', 6, true);
 
 
 --
--- Name: app_user app_user_pkey; Type: CONSTRAINT; Schema: booking; Owner: dejan
+-- Name: app_user app_user_pkey; Type: CONSTRAINT; Schema: booking; Owner: postgres
 --
 
 ALTER TABLE ONLY booking.app_user
@@ -565,7 +554,7 @@ ALTER TABLE ONLY booking.app_user
 
 
 --
--- Name: app_user_roles app_user_roles_pkey; Type: CONSTRAINT; Schema: booking; Owner: dejan
+-- Name: app_user_roles app_user_roles_pkey; Type: CONSTRAINT; Schema: booking; Owner: postgres
 --
 
 ALTER TABLE ONLY booking.app_user_roles
@@ -573,7 +562,7 @@ ALTER TABLE ONLY booking.app_user_roles
 
 
 --
--- Name: booking booking_pkey; Type: CONSTRAINT; Schema: booking; Owner: dejan
+-- Name: booking booking_pkey; Type: CONSTRAINT; Schema: booking; Owner: postgres
 --
 
 ALTER TABLE ONLY booking.booking
@@ -581,7 +570,7 @@ ALTER TABLE ONLY booking.booking
 
 
 --
--- Name: city city_pkey; Type: CONSTRAINT; Schema: booking; Owner: dejan
+-- Name: city city_pkey; Type: CONSTRAINT; Schema: booking; Owner: postgres
 --
 
 ALTER TABLE ONLY booking.city
@@ -589,7 +578,7 @@ ALTER TABLE ONLY booking.city
 
 
 --
--- Name: country country_pkey; Type: CONSTRAINT; Schema: booking; Owner: dejan
+-- Name: country country_pkey; Type: CONSTRAINT; Schema: booking; Owner: postgres
 --
 
 ALTER TABLE ONLY booking.country
@@ -597,7 +586,7 @@ ALTER TABLE ONLY booking.country
 
 
 --
--- Name: hotel hotel_pkey; Type: CONSTRAINT; Schema: booking; Owner: dejan
+-- Name: hotel hotel_pkey; Type: CONSTRAINT; Schema: booking; Owner: postgres
 --
 
 ALTER TABLE ONLY booking.hotel
@@ -605,7 +594,7 @@ ALTER TABLE ONLY booking.hotel
 
 
 --
--- Name: role role_pkey; Type: CONSTRAINT; Schema: booking; Owner: dejan
+-- Name: role role_pkey; Type: CONSTRAINT; Schema: booking; Owner: postgres
 --
 
 ALTER TABLE ONLY booking.role
@@ -613,7 +602,7 @@ ALTER TABLE ONLY booking.role
 
 
 --
--- Name: room_type room_type_pkey; Type: CONSTRAINT; Schema: booking; Owner: dejan
+-- Name: room_type room_type_pkey; Type: CONSTRAINT; Schema: booking; Owner: postgres
 --
 
 ALTER TABLE ONLY booking.room_type
@@ -621,7 +610,7 @@ ALTER TABLE ONLY booking.room_type
 
 
 --
--- Name: city uk_djnk44fptegbsu6drhc9xvlfj; Type: CONSTRAINT; Schema: booking; Owner: dejan
+-- Name: city uk_djnk44fptegbsu6drhc9xvlfj; Type: CONSTRAINT; Schema: booking; Owner: postgres
 --
 
 ALTER TABLE ONLY booking.city
@@ -629,7 +618,7 @@ ALTER TABLE ONLY booking.city
 
 
 --
--- Name: country uk_qrkn270121aljmucrdbnmd35p; Type: CONSTRAINT; Schema: booking; Owner: dejan
+-- Name: country uk_qrkn270121aljmucrdbnmd35p; Type: CONSTRAINT; Schema: booking; Owner: postgres
 --
 
 ALTER TABLE ONLY booking.country
@@ -637,7 +626,7 @@ ALTER TABLE ONLY booking.country
 
 
 --
--- Name: app_user_roles fk12tauuariiusdbesvpbww106k; Type: FK CONSTRAINT; Schema: booking; Owner: dejan
+-- Name: app_user_roles fk12tauuariiusdbesvpbww106k; Type: FK CONSTRAINT; Schema: booking; Owner: postgres
 --
 
 ALTER TABLE ONLY booking.app_user_roles
@@ -645,7 +634,7 @@ ALTER TABLE ONLY booking.app_user_roles
 
 
 --
--- Name: booking fk7eqvjwxkca3cc4vnj4y9cprkq; Type: FK CONSTRAINT; Schema: booking; Owner: dejan
+-- Name: booking fk7eqvjwxkca3cc4vnj4y9cprkq; Type: FK CONSTRAINT; Schema: booking; Owner: postgres
 --
 
 ALTER TABLE ONLY booking.booking
@@ -653,7 +642,7 @@ ALTER TABLE ONLY booking.booking
 
 
 --
--- Name: booking fkduvyvro3lbicslryt5t3ohb7h; Type: FK CONSTRAINT; Schema: booking; Owner: dejan
+-- Name: booking fkduvyvro3lbicslryt5t3ohb7h; Type: FK CONSTRAINT; Schema: booking; Owner: postgres
 --
 
 ALTER TABLE ONLY booking.booking
@@ -661,7 +650,7 @@ ALTER TABLE ONLY booking.booking
 
 
 --
--- Name: booking fkfihkjigldanoyfknph3arvagl; Type: FK CONSTRAINT; Schema: booking; Owner: dejan
+-- Name: booking fkfihkjigldanoyfknph3arvagl; Type: FK CONSTRAINT; Schema: booking; Owner: postgres
 --
 
 ALTER TABLE ONLY booking.booking
@@ -669,7 +658,7 @@ ALTER TABLE ONLY booking.booking
 
 
 --
--- Name: booking fkhacdq9bfa3r9xdimovsnonbyi; Type: FK CONSTRAINT; Schema: booking; Owner: dejan
+-- Name: booking fkhacdq9bfa3r9xdimovsnonbyi; Type: FK CONSTRAINT; Schema: booking; Owner: postgres
 --
 
 ALTER TABLE ONLY booking.booking
@@ -677,7 +666,7 @@ ALTER TABLE ONLY booking.booking
 
 
 --
--- Name: app_user_roles fkkwxexnudtp5gmt82j0qtytnoe; Type: FK CONSTRAINT; Schema: booking; Owner: dejan
+-- Name: app_user_roles fkkwxexnudtp5gmt82j0qtytnoe; Type: FK CONSTRAINT; Schema: booking; Owner: postgres
 --
 
 ALTER TABLE ONLY booking.app_user_roles
@@ -685,7 +674,7 @@ ALTER TABLE ONLY booking.app_user_roles
 
 
 --
--- Name: booking_foods fknmkf3mmy7hc0n737ygcvojjn1; Type: FK CONSTRAINT; Schema: booking; Owner: dejan
+-- Name: booking_foods fknmkf3mmy7hc0n737ygcvojjn1; Type: FK CONSTRAINT; Schema: booking; Owner: postgres
 --
 
 ALTER TABLE ONLY booking.booking_foods
@@ -693,7 +682,7 @@ ALTER TABLE ONLY booking.booking_foods
 
 
 --
--- Name: booking_dine_in fks3w8eiuic21i40hqjlpsedbss; Type: FK CONSTRAINT; Schema: booking; Owner: dejan
+-- Name: booking_dine_in fks3w8eiuic21i40hqjlpsedbss; Type: FK CONSTRAINT; Schema: booking; Owner: postgres
 --
 
 ALTER TABLE ONLY booking.booking_dine_in
